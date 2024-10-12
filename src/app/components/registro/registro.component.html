@@ -1,0 +1,59 @@
+<div class="container-mask">
+    <div class="card-body">
+        <div class="container-fluid d-block w-5 my-1">
+
+            <div class="row">
+                <!-- <div class="card">
+                        <div class="container-fluid ">
+                            <img src="assets/img/usuario.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div> -->
+                <div class="col">
+                    <form [formGroup]="formularioRegistro" (ngSubmit)="onSubmit()">
+                        <div class="form-title bg-dark py-2 text-center text-white">
+                            <h2>Registro de Usuarios</h2>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Nombres y Apellidos </label>
+                            <input type="text" class="form-control" formControlName="nombre" name="nombre" placeholder="Ingrese nombres y apellidos" setfocus>
+                            <small class="text-danger" *ngIf="correoValido">Debe Ingresar un Nombre  </small>
+                        </div>
+                        <div class="form-group">
+                            <label>Correo </label>
+                            <input type="text" class="form-control" formControlName="correo" name="correo" placeholder="Ingrese su correo">
+                            <small class="text-danger" *ngIf="correoValido">Debe Ingresar un correo valido </small>
+                        </div>
+                        <!-- <div class="form-group">
+                            <label>Telefono </label>
+                            <input type="text" class="form-control" formControlName="telefono" name="telefono" placeholder="Ingrese su correo">
+                        </div> -->
+
+                        <div class="form-group">
+                            <label>Usuario </label>
+                            <input type="text" class="form-control" formControlName="usuario" name="usuario" placeholder="Ingrese su nuevo usuario ">
+                            <small class="text-danger" *ngIf="usuarioValido">Debe Ingresar un Usuario,  minimo 5 caracteres </small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Clave o Password</label>
+                            <input type="password" class="form-control" formControlName="password1" name="password1" placeholder="Ingrese su password">
+                            <small class="text-danger" *ngIf="pass1Valido">Debe Ingresar un una clave con minimo 5 caracteres </small>
+                        </div>
+                        <div class="form-group">
+
+                            <input type="password" class="form-control" formControlName="password2" name="password2" placeholder="Repita su  password">
+                            <small class="text-danger" *ngIf="pass2Valido">Debe Ingresar un una clave con minimo 5 caracteres </small>
+                        </div>
+
+                        <button type="submit" class="btn btn-info btn-lg btn-block">Registrar Usuario </button>
+                    </form>
+                    <button routerLink="/login" type="button" class="mt-3 btn btn-outline-info">Ingresar</button>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+    .card {
+        background-color: #1B262C;
+        width: 60vw;
+        margin: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        box-sizing: border-box;
+    }
+    
+    @media screen and (max-width: 480px) {
+        .card {
+            width: 100vw;
+            margin: auto;
+        }
+    }
+    
+    @media screen and (max-width: 800px) {
+        .card {
+            width: 90vw;
+            margin: auto;
+        }
+    }
+    
+    @media screen and (max-width: 1024px) {
+        .card {
+            width: 80vw;
+            margin: auto;
+        }
+    }

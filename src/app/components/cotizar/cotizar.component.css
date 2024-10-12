@@ -1,0 +1,65 @@
+body {
+    background-image: url('/src/assets/img/telecomunicacion.jpg');
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+
+/* form {
+    width: 100%;
+    margin: auto;
+    background-image: linear-gradient(rgba(51, 58, 75, 0.4), rgba(117, 139, 194, 0.4)), url("/assets/img/telecomunicacion.jpg");
+    padding: 20px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+} */
+
+h2 {
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    /* margin-bottom: 20px; */
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+.text-danger {
+    font-size: 20px;
+    color: aqua;
+}
+
+#btn-enviar {
+    background: #139930;
+    font-size: 20px;
+    color: #fff;
+    padding: 10px;
+    margin: auto;
+}
+
+#btn-enviar:hover {
+    cursor: pointer;
+    color: darkblue;
+}
+
+@media screen and (max-width: 480px) {
+    /* form {
+        width: 100%;
+    } */
+}

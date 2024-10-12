@@ -1,0 +1,92 @@
+<h1>Productos</h1>
+<div class="card-columns">
+    <div class="card" *ngFor="let item of producto; let i=index">
+        <a [routerLink]="['/mostrar-producto',item.id_categoria]">
+            <img [src]=[ruta+item.imagen] class="card-img" [alt]=[ruta+item.imagen]>
+        </a>
+
+        <div class="card-body">
+            <h6 class="card-title"><strong>Producto : </strong> {{item.nombre}}</h6>
+            <h6 class="card-title"><strong>Ref : </strong> SER-00{{item.id_producto | number: "00.00"}}</h6>
+            <h6 class="card-text"><strong>Descripcion : </strong>{{item.descripcion}}</h6>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Manual : </strong>
+                    <a [href]="ruta+item.manualpdf" [download]="item.manualpdf">
+                        Descargar Manual
+                   </a>
+                </li>
+                <li *ngIf="item.precio<=0" class="list-group-item"><strong>Precio : </strong>Consultar Precio</li>
+                <li *ngIf="item.precio>0" class="list-group-item"><strong>Precio : </strong>{{item.precio}}$</li>
+                <li *ngIf="item.stock <=0" class="list-group-item"><strong>Stock : </strong>Bajo Pedido</li>
+                <li *ngIf="item.stock>0" class="list-group-item"><strong>Stock : </strong>{{item.stock}}</li>
+            </ul>
+            <a [routerLink]="['/cotizar', item.id_producto]" height="33" width="100" class="btn btn-success btn-block" alt="Botón">Cotizar</a>
+
+
+        </div>
+
+    </div>
+</div>
+<div>
+    <br><br>
+    <a href="javascript:history.back()" height="33" width="100" class="btn btn-outline-danger btn-block" alt="Botón">Regresar</a>
+    <br><br>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="card" style="width: 18rem;" *ngFor="let item of producto; let i=index">
+    <img [src]=[ruta+item.imagen] class="card-img-sub" [alt]=[ruta+item.imagen]>
+    <div class="card-body">
+        <h6 class="card-title"><strong>Producto :</strong> {{item.nombre}}</h6>
+        <h6 class="card-title"><strong>Ref :</strong> SER-00{{item.id | number: "00.00"}}</h6>
+        <h6 class="card-text"><strong>Descripcion :</strong>{{item.descripcion}} Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab fuga consequuntur voluptas eos cumque iste nam qui soluta molestias magnam quas, cum, exercitationem illum dolores eligendi doloremque
+            repellat, quasi quibusdam.</h6>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Manual : </strong>
+            <a href="javascript:history.back()" height="33" width="100" alt="Botón">Descarga Manual</a>
+        </li>
+        <li class="list-group-item"><strong>Precio :</strong>{{item.precio}}</li>
+        <li class="list-group-item"><strong>Stock :</strong>{{item.stock}}</li>
+    </ul>
+    <div class="card-body">
+        <a [routerLink]="['/cotizar', item.id]" height="33" width="100" class="btn btn-success btn-block" alt="Botón">Cotizar</a>
+        <a href="javascript:history.back()" height="33" width="100" class="btn btn-danger btn-block" alt="Botón">Regresar</a>
+    </div>
+
+</div>
+
+ -->
+
+
+
+<!-- <h1>Producto</h1>
+<br><br>
+<div class="catalogo">
+    <div class="container-fluid text-center">
+        <div class="card-group">
+            <div class="card" *ngFor="let item of producto; let i=index">
+                <img [src]=[ruta+item.imagen] class="card-img-sub" [alt]=[ruta+item.imagen]>
+                <br>
+                <button type="button" class="btn btn-primary">
+                {{item.nombre}}<span class="badge badge-light"></span>
+               
+            </button>
+
+
+            </div>
+        </div>
+        <br><br>
+        <a href="javascript:history.back()" height="33" width="100" class="btn btn-danger w-50" alt="Botón">Regresar</a>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->

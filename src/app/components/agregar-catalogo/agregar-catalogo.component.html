@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-header">
+        <h1>Agregar Catálogo</h1>
+        <button routerLink="/listar-catalogo" type="button" class="btn btn-primary">Listar Catálogo</button>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="formularioCatalogo" (ngSubmit)="enviarCatalogo()" enctype="multipart/form-data">
+            <div class="mb-1">
+                <label for="" class="form-label">Código/Ref/Nombre</label>
+                <input type="text" formControlName="nombre" name="nombre" class="form-control" placeholder="Código/Ref/Nombre de Catalogo" aria-describedby="helpId">
+            </div>
+            <div class="mb-2">
+                <label for="" class="form-label">Descripción</label>
+                <textarea type="text" formControlName="descripcion" name="descripcion" class="form-control" placeholder="Descripcion Catalogo (max 255 carácteres)" aria-describedby="helpId"></textarea>
+            </div>
+            <div class="mb-1">
+                <app-upload (archivoasubir)="capturarFile($event)"></app-upload>
+            </div>
+            <div class="card-footer text-muted">
+                <button *ngIf="loading" type="submit" class="btn btn-info">Guardar Catalogo</button>
+                <button (click)="regresarConfig()" type="button" class="btn btn-danger">Cancelar</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+<br><br><br><br><br>

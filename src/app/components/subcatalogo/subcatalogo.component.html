@@ -1,0 +1,17 @@
+<h1>Categorías</h1>
+<div class="card-columns">
+    <div class="card" *ngFor="let item of cat">
+        <a [routerLink]="['/mostrar-producto',item.id_categoria]">
+            <img [src]=[ruta+item.imagen] class="card-img" [alt]=[ruta+item.imagen]>
+        </a>
+        <div class="card-body">
+            <br>
+            <button [routerLink]="['/mostrar-producto',item.id_categoria]" class="btn btn-primary btn-block">{{item.nombre}}</button>
+        </div>
+    </div>
+</div>
+<div>
+    <br><br>
+    <a href="javascript:history.back()" class="btn btn-outline-danger btn-block" alt="Botón">Regresar</a>
+    <br><br>
+</div>

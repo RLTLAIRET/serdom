@@ -1,0 +1,12 @@
+<form enctype="multipart/form-data" method="POST">
+    <label for="" class="form-label">Imagen:  <small>Se aceptan archivos de tipo *.png *.jpg *.tif </small></label>
+    <input class="form-control p-2" (change)="captureFile($event)" id="imagen" name="imagen" type="file" accept="image/png, .jpeg, .jpg, image/gif">
+    <div *ngIf="previsualizacion">
+        <br>
+        <button class="btn btn-outline-danger" type="button" (click)="clearImage()">Limpiar Imagen</button>
+        <button class="btn btn-outline-success" type="button" (click)="subirArchivo()">Subir Imagen</button>
+        <br>
+        <img [src]="previsualizacion" alt="" width="200" height="150">
+    </div>
+
+</form>

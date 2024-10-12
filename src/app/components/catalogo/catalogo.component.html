@@ -1,0 +1,15 @@
+<h1>Catálogo</h1>
+<button *ngIf="listado" routerLink='/listado-productos' class="btn btn-outline-info">Listado Productos</button>
+<br>
+<br>
+<div class="card-columns">
+    <div class="card" *ngFor="let item of cat">
+        <a [routerLink]="['/subcatalogo',item.id]">
+            <img [src]=[ruta+item.imagen] class="card-img" [alt]=[ruta+item.imagen]>
+        </a>
+
+        <div class="card-body">
+            <h6>{{item.descripcion}}</h6>
+            <button [routerLink]="['/subcatalogo',item.id]" class="btn btn-primary btn-block">{{item.nombre}}</button>
+        </div>
+    </div>

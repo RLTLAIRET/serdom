@@ -1,0 +1,12 @@
+.formulario {
+    width: 80%;
+    height: 500px;
+    margin: auto;
+}
+
+.card {
+    width: 50%;
+    height: 600px;
+    margin: auto;
+    background-color: black;
+}

@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Configuración de Carrusel</h1>
+    <div class="row">
+
+        <form [formGroup]="formularioCarrusel" (ngSubmit)="enviarCarrusel()" enctype="multipart/form-data">
+            <app-upload (archivoasubir)="capturarFile($event)"></app-upload>
+
+        </form>
+    </div>
+    <div *ngIf="!imagenes" class="alert alert-danger" role="alert">
+        No hay imagenes en el carrusel para mostrar!!
+    </div>
+    <div *ngIf="imagenes" class="row">
+        <div class="card-columns">
+            <div class="card" *ngFor="let item of imagenes; let i=index">
+                <img [src]="item.imagen | noImagen" [alt]="" class="imagen-carrusel">
+                <div class="card-body">
+                    <a (click)="eliminar(item.id,i,item.imagen)"><i class="fas fa-trash-alt" role="button"></i></a>
+                    <!-- <button (click)="eliminar(i)"><i class="fas fa-trash-alt"></i></button> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+.navbar {
+    color: #00B7C2 !important;
+    background-color: #1B262C !important;
+    margin-bottom: 0px;
+}
+
+.navbar-brand {
+    padding: 10px;
+    font-size: 20px;
+    color: #FDCB9E !important;
+}
+
+.nav-link,
+.dropdown-item {
+    color: #00B7C2 !important;
+    font-size: 20px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,17 @@
+{
+    "catalogo": [
+        { "id": 1, "title": "Automatización y control industrial", "imagen": "../../../assets/img/catalogo/Instrumentacion.jpg" },
+        { "id": 2, "title": "Medición de Variables Físicas", "imagen": "../../../assets/img/catalogo/variables fisicas.jpg" },
+        { "id": 3, "title": "Paneles Solares", "imagen": "../../../assets/img/catalogo/panel solar.jpg" },
+        { "id": 3, "title": "Herramientas", "imagen": "../../../assets/img/catalogo/multimetros.jpg" }
+
+    ],
+    "sub": [{
+        "categoria_id": 1,
+        "titulo": "HMI ERGO",
+        "texto": "SUB-TITULO MHI ERGO",
+        "manual": "MANUAL",
+        "imagen": "../../../assets/img/hmiergo/HMI ERGO principal.jpg"
+    }]
+
+}

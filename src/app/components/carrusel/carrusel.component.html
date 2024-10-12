@@ -1,0 +1,9 @@
+<carousel [noWrap]="noWrapSlides">
+    <slide *ngFor="let slide of slides; let index=index">
+        <img [src]="slide.image" class="img-carrusel-home">
+        <div class="carousel-caption">
+            <h5>{{slide.message}}</h5>
+            <div class="txtslide">{{slide.text}}</div>
+        </div>
+    </slide>
+</carousel>

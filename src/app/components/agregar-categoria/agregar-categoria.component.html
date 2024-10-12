@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-header">
+        <h1>Agregar Categoria</h1>
+        <button routerLink="/listar-categoria" type="button" class="btn btn-primary">Actualizar Categoria</button>
+        <hr>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="FormularioCategoria" (ngSubmit)="enviarCategoria()" enctype="multipart/form-data">
+            <label for="catalogo" class="form-label">Seleccione el Catalogo : </label>
+            <select name="miselect" formControlName="catalogo">
+                   <option class="form-control" [value]="item.id" *ngFor="let item of catalogo">{{item.nombre}}</option>
+            </select>
+            <hr>
+            <div class="mb-1">
+                <label for="" class="form-label">Código/Ref/Nombre</label>
+                <input type="text" formControlName="nombre" name="nombre" class="form-control" placeholder="Código/Ref/Nombre de Categoria" aria-describedby="helpId">
+            </div>
+            <div class="mb-1">
+                <app-upload (archivoasubir)="capturarFile($event)"></app-upload>
+            </div>
+            <div class="card-footer text-muted">
+                <button *ngIf="loading" type="submit" class="btn btn-info">Guardar Categoria</button>
+                <button (click)="regresarConfig()" type="button" class="btn btn-danger">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
+<br><br><br><br><br>

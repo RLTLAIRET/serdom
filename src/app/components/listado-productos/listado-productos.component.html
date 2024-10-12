@@ -1,0 +1,63 @@
+<div class="card">
+    <div class="card-header">
+        <h1>Listado General de Productos</h1>
+    </div>
+    <div class="table-responsive">
+
+        <table class="table py-4">
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>id_prod</th>
+                    <th>Catálogo</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Imagen</th>
+                    <th>Manual</th>
+                    <!-- <th>Precio</th>
+                    <th>Stock</th> -->
+                    <th>Cotizar</th>
+
+                </tr>
+            </thead>
+            <tbody *ngFor="let item of productos; let i=index">
+                <tr class="item-tabla">
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>{{item.id_producto}}</td>
+                    <td>{{item.id_categoria}}</td>
+                    <td>{{item.nombre}}</td>
+                    <td>{{item.descripcion}}</td>
+                    <td>
+                        <img [src]="item.imagen | noImagen" [alt]="" class="imagen-list">
+                    </td>
+                    <th>
+                        <a *ngIf="!item.manualpdf">
+                            <i class="far fa-file-pdf"></i> No disponible
+                        </a>
+                        <a *ngIf="item.manualpdf" [href]="ruta+item.manualpdf" [download]="item.manualpdf">
+                            <i class="far fa-file-pdf"></i> {{item.manualpdf}}
+                        </a>
+                    </th>
+                    <!-- <th>{{item.precio}}</th>
+                    <th>{{item.stock}}</th> -->
+
+                    <!-- <td>
+                        <a routerLink='/modificar-catalogo/{{item.id}}' role="button">
+                            <i class="far fa-edit"></i>
+                        </a>
+
+                    </td> -->
+                    <td>
+                        <a [routerLink]="['/cotizar', item.id_producto]" height="33" width="100" class="" alt="Botón">
+                            <i class="far fa-clipboard"></i>
+                        </a>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" routerLink="/config" class="btn btn-outline-danger">Regresar</button>
+
+    </div>
+    <br><br><br><br><br>
+</div>

@@ -1,0 +1,44 @@
+<div class="card">
+    <div class="card-header">
+        <h1>Modificar Producto</h1>
+        <button routerLink="/listar-producto" type="button" class="btn btn-primary">Listar Producto</button>
+    </div>
+    <div class="card-body">
+
+        <form [formGroup]="formularioProducto" (ngSubmit)="enviarProducto()" enctype="multipart/form-data">
+            <!-- <label for="catalogo" class="form-label">Seleccione el Categoria : </label>
+            <select name="miselect" formControlName="categoria">
+                   <option class="form-control" [value]="item.id_categoria" *ngFor="let item of categorias">{{item.nombre}}</option>
+            </select> -->
+            <div class="mb-1">
+                <label for="" class="form-label">Codigo/Ref/Nombre:</label>
+                <input readonly type="text" formControlName="nombre" name="nombre" class="form-control" placeholder="Codigo/Ref o Nombre del Producto" aria-describedby="helpId">
+            </div>
+            <div class="mb-2">
+                <label for="" class="form-label">Descripción</label>
+                <textarea type="text" formControlName="descripcion" name="descripcion" class="form-control" placeholder="Descripcion  Producto (max 255 carácteres)" aria-describedby="helpId"></textarea>
+            </div>
+            <div class="mb-2">
+                <app-uploadoc (documentoasubir)="capturarFiledoc($event)"></app-uploadoc>
+            </div>
+            <div class="mb-1">
+                <label for="" class="form-label">Precio</label>
+                <input type="text" formControlName="precio" name="precio" class="form-control" placeholder="Precio $" aria-describedby="helpId">
+            </div>
+            <div class="mb-1">
+                <label for="" class="form-label">Stock</label>
+                <input type="text" formControlName="stock" name="stock" class="form-control" placeholder="stock" aria-describedby="helpId">
+            </div>
+
+            <div class="mb-1">
+                <app-upload (archivoasubir)="capturarFile($event)"></app-upload>
+            </div>
+            <div class="card-footer text-muted">
+                <button type="submit" class="btn btn-info">Guardar Producto</button>
+                <button (click)="regresarConfig()" type="button" class="btn btn-danger">Cancelar</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+<br><br><br><br><br>

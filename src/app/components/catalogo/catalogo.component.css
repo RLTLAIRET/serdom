@@ -1,0 +1,15 @@
+.card {
+    width: 100%;
+    text-align: center;
+}
+
+.card-body {
+    font-size: 10px;
+    color: rgb(57, 65, 80);
+}
+
+.card-title {
+    color: blue;
+    font-size: 20px;
+    text-align: center;
+}

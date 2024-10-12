@@ -1,0 +1,37 @@
+<div class="row">
+    <button (click)="logIn()" *ngIf="!login" type="button" class="btn btn-outline-info">Iniciar</button>
+    <button routerLink="/config" *ngIf="config" type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="">Config</button>
+    <button (click)="logout()" *ngIf="login" type="button" class="btn btn-outline-danger">Cerrar</button>
+</div>
+
+
+<!-- <ng-container *ngIf="login; then loginIn; else logout"></ng-container>
+<ng-template #loginIn>
+    <div class="col">
+
+        <ul class="login-perfil">
+            <a>
+                <div class="row">
+                    <p id="perfil" data-toggle="tooltip" data-placement="top" title="">{{usuario}} </p>
+                </div>
+            </a>
+
+        </ul>
+    </div>
+    <div class="col">
+        <a routerLink="/config" data-toggle="tooltip" data-placement="top" title="Administrar Web">
+            <i class="fas fa-tools fa-2x mt-2"></i>
+        </a>
+       
+    </div>
+    <div class="col">
+        <button id="btn-out" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Cerrar Sesión">
+            Cerrar
+         </button>
+    </div>
+
+
+</ng-template>
+<ng-template #logout>
+    <button id="btn-in" class="btn btn-outline-primary" routerLink="/login" data-toggle="tooltip" data-placement="top" title="Iniciar Sesión">Iniciar</button>
+</ng-template> -->

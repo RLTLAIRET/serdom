@@ -1,0 +1,47 @@
+<div class="card">
+    <div class="card-header">
+        <h1>Actualizar Catalogo</h1>
+    </div>
+    <div class="table-responsive">
+        <button routerLink="/agregar-catalogo" type="button" class="btn btn-primary">Agregar Catálogo</button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Imagen</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+
+                </tr>
+            </thead>
+            <tbody *ngFor="let item of catalogos; let i=index">
+                <tr>
+                    <td>{{item.id}}</td>
+                    <td>{{item.nombre}}</td>
+                    <td>{{item.descripcion}}</td>
+                    <td>
+                        <img [src]="ruta+item.imagen" [alt]="ruta+item.imagen" class="imagen-list">
+
+                    </td>
+                    <td>
+                        <a routerLink='/modificar-catalogo/{{item.id}}' role="button">
+                            <i class="far fa-edit"></i>
+                        </a>
+
+                    </td>
+                    <td>
+                        <a (click)="eliminarCatalogo(item.id, i, item.imagen)" role="button">
+                            <i class="far fa-trash-alt"></i>
+                        </a>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" routerLink="/config" class="btn btn-outline-danger">Regresar</button>
+
+
+    </div>
+</div>

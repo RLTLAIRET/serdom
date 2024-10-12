@@ -1,0 +1,17 @@
+.item-tabla {
+    color: rgb(63, 52, 52);
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.fa-trash-alt {
+    margin-left: 20px;
+    font-size: 25px;
+    color: rgb(218, 3, 3);
+}
+
+.fa-edit {
+    margin-left: 20px;
+    font-size: 25px;
+    color: green;
+}
